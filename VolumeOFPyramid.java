@@ -1,14 +1,16 @@
 import java.util.Scanner;
 
-public class VolumeOfsphere {
+public class VolumeOFPyramid {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("enter Radius");
-        int r = in.nextInt();
-        if (r > 0) {
+        System.out.println("enter Base");
+        int b = in.nextInt();
+        System.out.println("enter Height");
+        int h = in.nextInt();
+        if (b > 0 && h > 0) {
 
             double volume;
-            volume = (4 / 3) * 3.14 * r * r * r;
+            volume = 0;
             System.out.println("the volume is" + volume);
         } else {
             System.out.println("Enter the correct value");
@@ -17,5 +19,4 @@ public class VolumeOfsphere {
         }
 
     }
-
 }
