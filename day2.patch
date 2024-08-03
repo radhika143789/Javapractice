@@ -1,0 +1,894 @@
+Subject: [PATCH] day2
+---
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/.gitignore b/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/.idea/.gitignore	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: .idea/Assignment2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/Assignment2.iml b/.idea/Assignment2.iml
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/.idea/Assignment2.iml	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/misc.xml b/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/.idea/misc.xml	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/modules.xml b/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/.idea/modules.xml	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/Assignment2.iml" filepath="$PROJECT_DIR$/.idea/Assignment2.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: Area_of_Rhombus.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Area_of_Rhombus.java b/Area_of_Rhombus.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/Area_of_Rhombus.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,22 @@
++import java.util.Scanner;
++
++public class Area_of_Rhombus {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        int d1;
++        int d2;
++        int area;
++        System.out.println("Enter the diagonal1");
++        d1 = in.nextInt();
++        System.out.println("Enter the diagonal2");
++        d2 = in.nextInt();
++        if(d1>0 && d2>0){
++            area =(d1*d2)/2;
++            System.out.println("The area of the Rhombus is " +area);
++        }
++        else{
++            System.out.println("Enter correct values ");
++        }
++    }
++}
++
+Index: AreaofCicle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/AreaofCicle.java b/AreaofCicle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/AreaofCicle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,16 @@
++import java.util.Scanner;
++public class AreaofCicle {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the radius of the circle");
++        int r =in.nextInt();
++
++        if(r>0){
++            double area =3.14*r*r;
++            System.out.println("The area of the circle is " +area);
++        }
++        else{
++            System.out.println("Enter correct value for radius ");
++        }
++    }
++}
+Index: Equilateral_triangle_area.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Equilateral_triangle_area.java b/Equilateral_triangle_area.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/Equilateral_triangle_area.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,20 @@
++import java.util.Scanner;
++
++public class Equilateral_triangle_area {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        int a;
++
++        double area;
++        System.out.println("Enter the side");
++        a = in.nextInt();
++
++        if(a>0){
++            area =((Math.pow(3,(1.0/3)))/4) * (Math.pow(a,2));
++            System.out.println("The area of the Equilateral triangle is " +area);
++        }
++        else{
++            System.out.println("Enter correct values ");
++        }
++    }
++}
+Index: PerimeterOfEquilateralTriangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/PerimeterOfEquilateralTriangle.java b/PerimeterOfEquilateralTriangle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/PerimeterOfEquilateralTriangle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,21 @@
++import java.util.Scanner;
++
++public class PerimeterOfEquilateralTriangle {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the radius of the circle");
++        int r =in.nextInt();
++
++        if(r>0){
++            double perimeter =2*3.14*r;
++
++            System.out.println("The perimeter of the circle is "+perimeter);
++        }
++        else{
++            System.out.println("Enter correct value for radius ");
++        }
++    }
++}
++
++
++
+Index: Perimeterofcircle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Perimeterofcircle.java b/Perimeterofcircle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/Perimeterofcircle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class Perimeterofcircle {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the radius of the circle");
++        int r =in.nextInt();
++
++        if(r>0){
++            double perimeter =2*3.14*r;
++
++            System.out.println("The perimeter of the circle is "+perimeter);
++        }
++        else{
++            System.out.println("Enter correct value for radius ");
++        }
++    }
++}
++
+Index: VolumeofCone.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/VolumeofCone.java b/VolumeofCone.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/VolumeofCone.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,21 @@
++import java.util.Scanner;
++
++public class VolumeofCone {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the .radius");
++        int r =in.nextInt();
++        System.out.println("Enter the height");
++        int h =in.nextInt();
++
++
++        if(r >0 && h>0 ){
++            double perimeter =3.14*(Math.pow(r,3)*h/3);
++
++            System.out.println("The perimeter of the cone is "+perimeter);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
+Index: area_of_parallelogram.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/area_of_parallelogram.java b/area_of_parallelogram.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/area_of_parallelogram.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,22 @@
++import java.util.Scanner;
++
++public class area_of_parallelogram {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        int l;
++        int b;
++        int area;
++        System.out.println("Enter the height");
++        l = in.nextInt();
++        System.out.println("Enter the base");
++        b = in.nextInt();
++        if(b>0 && l>0){
++            area =b*l;
++            System.out.println("The area of the parallelogram is " +area);
++        }
++        else{
++            System.out.println("Enter correct values ");
++        }
++    }
++    }
++
+Index: area_of_triangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/area_of_triangle.java b/area_of_triangle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/area_of_triangle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,20 @@
++import java.util.Scanner;
++
++public class area_of_triangle {
++    public  static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the base of triangle");
++        double b =in.nextInt();
++        System.out.println("Enter the height of triangle");
++        double h =in.nextInt();
++
++        if(b>0&&h>0){
++            double area =(h * b)/2;
++            System.out.println("The area of the triangle is " +area);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
++
+Index: areaofIsoscelesTriangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/areaofIsoscelesTriangle.java b/areaofIsoscelesTriangle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/areaofIsoscelesTriangle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class areaofIsoscelesTriangle {
++    public  static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the base of Isoscele triangle");
++        double b =in.nextInt();
++        System.out.println("Enter the height of Isoscele triangle");
++        double h =in.nextInt();
++
++        if(b>0&&h>0){
++            double area =(h * b)/2;
++            System.out.println("The area of the Isoscele triangle is " +area);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
+Index: areaofRectangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/areaofRectangle.java b/areaofRectangle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/areaofRectangle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class areaofRectangle {
++    public  static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the length of rectangle");
++        double l =in.nextInt();
++        System.out.println("Enter the breath of rectangle");
++        double b =in.nextInt();
++
++        if(b>0&&l>0){
++            double area =(l * b);
++            System.out.println("The area of the rectangle is " +area);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
+Index: out/production/Assignment2/.idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/Assignment2/.idea/.gitignore b/out/production/Assignment2/.idea/.gitignore
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/out/production/Assignment2/.idea/.gitignore	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,3 @@
++# Default ignored files
++/shelf/
++/workspace.xml
+Index: out/production/Assignment2/.idea/Assignment2.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/Assignment2/.idea/Assignment2.iml b/out/production/Assignment2/.idea/Assignment2.iml
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/out/production/Assignment2/.idea/Assignment2.iml	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,11 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<module type="JAVA_MODULE" version="4">
++  <component name="NewModuleRootManager" inherit-compiler-output="true">
++    <exclude-output />
++    <content url="file://$MODULE_DIR$">
++      <sourceFolder url="file://$MODULE_DIR$" isTestSource="false" />
++    </content>
++    <orderEntry type="inheritedJdk" />
++    <orderEntry type="sourceFolder" forTests="false" />
++  </component>
++</module>
+\ No newline at end of file
+Index: out/production/Assignment2/.idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/Assignment2/.idea/misc.xml b/out/production/Assignment2/.idea/misc.xml
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/out/production/Assignment2/.idea/misc.xml	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,6 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="openjdk-21" project-jdk-type="JavaSDK">
++    <output url="file://$PROJECT_DIR$/out" />
++  </component>
++</project>
+\ No newline at end of file
+Index: out/production/Assignment2/.idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/out/production/Assignment2/.idea/modules.xml b/out/production/Assignment2/.idea/modules.xml
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/out/production/Assignment2/.idea/modules.xml	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,8 @@
++<?xml version="1.0" encoding="UTF-8"?>
++<project version="4">
++  <component name="ProjectModuleManager">
++    <modules>
++      <module fileurl="file://$PROJECT_DIR$/.idea/Assignment2.iml" filepath="$PROJECT_DIR$/.idea/Assignment2.iml" />
++    </modules>
++  </component>
++</project>
+\ No newline at end of file
+Index: perimeterofRectangle.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/perimeterofRectangle.java b/perimeterofRectangle.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/perimeterofRectangle.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class perimeterofRectangle {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the length and breath  of the rectangle");
++        int a =in.nextInt();
++        int b =in.nextInt();
++
++        if(a >0 && b>0 ){
++            int perimeter =2*(a+b) ;
++
++            System.out.println("The perimeter of the rectangle is "+perimeter);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
+Index: perimeterofSquare.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/perimeterofSquare.java b/perimeterofSquare.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/perimeterofSquare.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class perimeterofSquare {
++    public static void main(String[]args){
++    Scanner in = new Scanner(System.in);
++    System.out.println("Enter the sides of the Square");
++    int a =in.nextInt();
++
++
++    if(a >0 ){
++        int perimeter =4*a;
++
++        System.out.println("The perimeter of the Square is "+perimeter);
++    }
++    else{
++        System.out.println("Enter correct value  ");
++    }
++}
++}
+Index: perimeterofparallelogram.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/perimeterofparallelogram.java b/perimeterofparallelogram.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/perimeterofparallelogram.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class perimeterofparallelogram {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the sides of the parallelogram");
++        int a =in.nextInt();
++        int b =in.nextInt();
++
++        if(a >0 && b>0 ){
++            int perimeter =2*(a+b) ;
++
++            System.out.println("The perimeter of the parallelogram is "+perimeter);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
+Index: perimeterofrhombus.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/perimeterofrhombus.java b/perimeterofrhombus.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/perimeterofrhombus.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,19 @@
++import java.util.Scanner;
++
++public class perimeterofrhombus {
++    public  static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("Enter the sides of the Square");
++        int a =in.nextInt();
++
++
++        if(a >0 ){
++            int perimeter =4*a;
++
++            System.out.println("The perimeter of the Square is "+perimeter);
++        }
++        else{
++            System.out.println("Enter correct value  ");
++        }
++    }
++}
+Index: volumeofprism.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/volumeofprism.java b/volumeofprism.java
+new file mode 100644
+--- /dev/null	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
++++ b/volumeofprism.java	(revision edcadddc173435b5eee24b35f4b1e0331cf44f67)
+@@ -0,0 +1,20 @@
++import java.util.Scanner;
++
++public class volumeofprism {
++    public static void main(String[]args){
++        Scanner in = new Scanner(System.in);
++        System.out.println("enter if you have base area oo not");
++        boolean n = in.nextBoolean();
++        if (n == true){
++            System.out.println("Enter the base area");
++            int area = in.nextInt();
++            System.out.println("Enter the height");
++            int height = in.nextInt();
++            double volume = area * height;
++        }
++        else{
++
++        }
++
++        }
++}
+diff --git a/out/production/Assignment2/Area_of_Rhombus.class b/out/production/Assignment2/Area_of_Rhombus.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..06c11eaa0df34596b761fbbe2859167065ebb36c
+GIT binary patch
+literal 1406
+zc$|$?T~8B16g^W~wv<Jn2v!7K6tqR5f`}hg6pCoIsIdfNd>}(Rv<usvW_L>DpZLV9
+z&-fq-CjJ1Q{XNDz+ZvHp<0d=z>)d<K-kF_mKaRfwSVBIA5IPKmO+?Vi(6__)c-rA^
+zIsI~LM-&x9=Y89?)gnVjGPPkK%FrKx>dJP~g(7!d;dLQ~ZUd%?9-R53N@3quqRJ4m
+zU53GY5U^!B=ho_~pgh5=nHUW8>Hhr;iDX+yYD0GzFmV=xL`2rr$zrcO+x>-%;vB=k
+zV^;~!QWas9Y+jZwcV=Tak6{BBOpIWZAZ?NvjGDF_O|?m+@ezvLWn!VJUNm80oUpEV
+zuX3&m29t~8a@)Rhahmg_i7U9uaIVUCMOL~+uHM+HLYl9*t9;!qmuhVoMT$a=qDAR>
+zv>(<Uck05o3|wRAT_W0>a(nZ2MOL@!R41I3B|(9_?TQ!m>Xz`<`IbYTcwQE{v%x)E
+z+f8R!RcuP?&!4K3p-`3U9UDr%Yc~gqb4p=gxj-#bm4P-$^5$C(3wcAOS-s3L^b`~?
+z?ym7#lTxf8>t0c;+S)jKir0*;MaOGdO64n$*Vcrp$dVt$Lxz!c8oOp?$?aeZnn{-J
+zTdcPeOED}XYhXoh#$$$w-)wDnPwt8)>Bj!7@}iR7KEsET2cZdUw0+9mk|X?yyp+53
+zTBh~u|CYGEUlVQMC+FAr`7){25?Ssz1zQQ4qM6g<%sSlng>T>~!{mQaHSmmK?B7uO
+z?;Bu@V~Xww{e-~uEkWybveG0O$;i|Z*kKT!rnNJ0c3_59vjHIJ4U%1$#auJ_J0T(@
+z*S^4b`w3k~bYwpv9v}LQ#I?^Dd!UU=O=EH70Ar&E7#<m|M4W{%#RkL2m;eay5#1V_
+zB=s<8tVvAKZJ`@?Q_}&`6Qo&0XOixxX`I14da;5y@^qnSqVt5EM;~s|8rHOM3kxK>
+z>B#ipHjz${=MF_fR3nMIq;=q4fC&A-iUET$gIt+l4)^hZWR%h#(YuIMvSOq?K@QJx
+F{wKIZSt9@d
+
+diff --git a/out/production/Assignment2/AreaofCicle.class b/out/production/Assignment2/AreaofCicle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..f577dc2e37e0db12af7f8785975a7a1e456d93ae
+GIT binary patch
+literal 1366
+zc$|$?TTc@~6#j-wx0gk*6|7pJ7(|Lnz2U8jKoP0dTS_p-r(qfB(CtpMJ0<c1jDNu=
+zUwzgGG@AGW{44$jjc2wc)=-U`-MO6e&3C>tXJ@|s{QMQb0?Kjppw~j5jebNJhPL?*
+z&%4~)%0FJ;7LI0!+>)Nua}2#xxit$>hQlGKsim8*INbAuA441o3$~2`9QuQ$vKweo
+zXXue0!*DrtNR=;nji#<>U+{V%4husj{$YmnR98rD%|uAqID%mkqMEvs?1?YEePk3z
+z8Ak7VTKHLA6<MEe$YzjLo8ionzT=8Gj^Vh46E-q9$&l*8!(cVc%r&apnp*j2GH;O}
+zqk7Cn7UP8V#7kZBbht;Q$b4+{)6?&-#*(zfr)^B)48zenuZg1a9Il^9U8PZ=xu*j|
+zzmz)|Ac`ErSSt@l`975*yTje4$ZjfsKPwAo84?R5SZx+1Wya7~R2$R{mZc{iHS6ob
+zU*+q@kt{2RyKCH+X5KdT>8d0N1LY2m0-5XFlxt+_MYqh!&k4@Jmcro{F{HX6$yz?}
+zr;wHT^pz-TMRTY2kT=?5;uY2O9kDFUWT->YjA0?uqEb50K5sk}x~evUDDE(vSf#oe
+zJ%83XD}yW>j9?*-MHDS8nL6BMnD{MIdONBn+G<;+S>}#b{w~9t&YHJ@t*9&9+i*oN
+zQC6zfY!nWr{kMgyyA9C=-nntDBUi{Bq$qONtw?Q(W0%Z67F`|$BCxQ+aQeTbTDVUq
+z<KIv^?JY3IF-<pvd3wOi-9YU*n&qiy)b~$+1bZL4&r=%-jXjv5)@}g^dV%^FF5*&q
+z@gDlf4$OUl_51^3AL&2+fMjxH59zae7`>f&i_8(6%Dk@8d!Jmn&zLal((jNk$SE3{
+zsJ&s-Nn!_aCWtjf8q$c;k&cl)PB9ahrR(T6218ZTgqtL7mvMzwlLqo$r9MHH0bC=6
+sY4Tsk4a(vs+38~ZfmsU{vj|@Zv%5uXpcoAE^vz*8#4+4M2@i1W7ZpEJIsgCw
+
+diff --git a/out/production/Assignment2/Equilateral_triangle_area.class b/out/production/Assignment2/Equilateral_triangle_area.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..ba937543dff5b51640ecb188c714953e39b53a46
+GIT binary patch
+literal 1476
+zc$|$?OH&g;5dMZoHiYFJ6%=u`P_t+m72i=r63}1}G(5CCSVI`elFd%souK>z|AHs4
+zp7kJ>R_WclKS#@+-B4l?EVpX6XS%=c{-&q5zyJFD6~G-lPM`&?2HH%tBgW9X!8du@
+z<=%RFesx2X6hrK$<2h=Ap*3YM8;CRXg`m1}+;p+TJx}-@NTAbzX`&0=e?=*71xi#I
+zS{#qzKp`|ZGM)EobyZZp;MGh526}b=K8C?mQ;5B+GYptW;s6nmb+tR#g70`c$T$u$
+zbWeLq_?9XQD{$6C0z)`#;E0J~9Ay}2;>Tdr^v=~R8yq73iqz{wK(jn%!oqRFdg7JJ
+zdn&9+J~kOg_{47iSPGv6P9tT&HZg`XMCVVqIj+j&Rg*6n+Ecllor_KOHoPYziGF%7
+zn7D{>hC@|e5n1V#xLR>knO1?~o(eR}oV}N49GA%y9ls=fpKj3F<ZfLAmVv7bL(?zn
+zj?2l+-Dl)NuC92-sRRsdS-B<{dJ2vw9@ML=!e8X8E@}D;vc%nGPH@^clx?c)5RD^+
+zeIsTFROR~K52l_rD=FEd%q$l!*D2mW6C`O1ds>dPOuOb8x{8XIDs#Nnpq41gx?d7A
+zj^2#y%kP|yNzFPXr3#eKYjZ-C<ysKOeFl4xnn$B7`8;f-U16-9FqRWotS5%K1Rh}C
+zz=FQDhYX{Cj^KEkvLYHMi7s-6mz4Ck7~bq|v<5KZaF2Uyt_Vg8Qda7<%-)jh=eW34
+z6HVZ|iyHmc8GCPtEO*_aqXd=K%<CFwT^<A?FtEsQ^1rAWpj#dJH<U(71jcb(q4A@i
+z7BD@4=zEQJX_Aa&``9+v`_Oz{{~@8W6*uT>MgU}RlVk^OVWQ#ujd1NG?|*^u<O4dk
+zsiQxjzyIJz44(Ojkz2!WVJC4SiP29umBd*&{5pwqw64q&&i;(^0Ab&uQ@dTF<@+$L
+zrf>rBFl{HL9H5aj2t8D~Fph3ap%1g9)%3>DM!Fu{#w2+X8Je|IBs*!}g)C7WBzq3i
+nbhH`L(-{7VDFX&G2!A&`@;&59#tB=XcNULA977RHSi#V5g<Ebz
+
+diff --git a/out/production/Assignment2/PerimeterOfEquilateralTriangle.class b/out/production/Assignment2/PerimeterOfEquilateralTriangle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..8245f5d5b1c578274f042229fb26efc852912a4b
+GIT binary patch
+literal 1430
+zc$|$?ZBG+H5Pp`IURw@%6+tVUib_$b;=2_E3uv_}rVYmUX*m|U_Ig+E_K5rd<6rQT
+zU;T_GU@-9q_*eW58fULXAyi_M?(EDyJM+x!+<gDF{SCkj3Q4q})j*qxcElLEU-31b
+zak#shdAjsU*oq-`Te?!+VQ3voFB*t5^hBUgNhedZx$6o)fh0N%m?k=LXpfiTdZ0v=
+zp+&k3hYQhx^fGz37OJB11+Qk4Fwm{z_b?2OHHD-Xb%Z_>{WwfSyio0Sw%|*52N}l^
+zhT%C^3Exs>VflPnhJod+M4Byq+Yw0&;i!RQCQ>-g(AUHdgHh9(qggjN)$>tgUL``B
+z^@s@zCkX3`H!AO{s7CqN^w98^XFuMK^iqjWn>d5B3`eTGB66N<bM;)RGVKDzT@`5e
+zv+4Z-;z%=$)bp@C->0Xr*0>W2YsK?-vNCXvl3ftKtO^1?U733wN{7>yJ0)L|J4Z0I
+z<-BDQT?OfiCt-C-_$9ui4|)rp&7DO~NYWd|HdU6y$|@Y}HcQAV*N-|d_Oe-h7!tJ|
+z4-9OU@Z4V|&wWkcWG(D#DzY+tHP6slRNSsS=CuaNWYG(KTg*$XoI054gmz3ldC&7y
+zpnP6?EL7QB4&t~=X_lxf{_xz}CYB5=))m7{68DfZFsq+(j$!mKed(@w7179|{<`zr
+zR-V7k@P2pOG=TNc54gMRh+wqfd6lr1-CvG>T`aBFL=*V#g4Vy<Y<j<o9Cw_eRQl!2
+zysmG~;Xxn*0}mKZ{})vQ52@b{hSI>OgK+}mG+gwr1x$|@TF;Y~A<0O#k8go(M8_9s
+zjYY;*Owel90R+8BGJ#8&Y+U|~HnIcRuP|PGLSl>h`V)G42R1QyZWF^(sSg<H$H~;Y
+z%0sfJw=oLP*++C}*cfd$qA)t-8FH<|bWrd<`kn_#Ptl+`MFcW5$|li;Tj+@>jZ<K4
+zzl<w%n+V`4u955@ik-Ml^aknt25wS1x5!R|^(Q6`7|bAiHcIn0rbxyKJ5B#Pn2&G_
+K_mRgV4E+Y>Hf?$U
+
+diff --git a/out/production/Assignment2/Perimeterofcircle.class b/out/production/Assignment2/Perimeterofcircle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..96f4ae238fc65b4dde3760b048d33630249c439b
+GIT binary patch
+literal 1391
+zc$|$?ZBG+H5PlZ0SIQw!-ijieib_GL;=2{!3TU;yr37RAv>XdvdcAG#wnTn_@h|wv
+zuYLv-HJJDV{44$jjkDLHm{wzx?%d2gJM+xW?tJ~R`vt&l6cT7dyM+!L2M}ZE-Qb%%
+z<8gmI^LS-LxSAn$UHVerU}&FAFI$K+^hKbWmR_dla^Dw0ClctgVB6@%!9SuDw?Zu{
+z3~kb97%W5%sWN%LTGK@x2wur1V4>IK?_)?!wuGdYO@@9O0~jPCs;2h`dlE>04;jZW
+z!`OnaMd0X?a00$6YoVjoBF&Y7>xl$LaLB@88>2YF(BC2sgH<(}XIM8l)$7q@UME6^
+z^|%cOM+xhTmpbq3=#28QTO(tio_>2Zo}?o_VdErDF$`CDS>%-Oa{Wx|5`Bf5`#Ln?
+z=hMvz;z%=$*XwXq5Kt?eP43l%v!;T*sw_-XH=c+<Rs;dnTD?Aoj+|O0(NmDVcvP#b
+zh+v7Y7)P?8T<$INKpMSa?9e4iMEVO&k+S5haMQY>$rr6ofuXayw~2wx6P^d_CRhu&
+zNzrt5$jZ#tJVSR;bGQ7ER~x(%MO6!2u_%o))I@H^#G=b~M=2fZfL9+1T~e!I95)%9
+zC2IFCYJc|Mk)gwSVz`~a9po&`n;tDNO#Egn{Y_OC4dV5-Epk_@V2k0+{`=4X)>Gf(
+z{;DU!iGot)S~c5z0)N}Mv{e-?;QP<8{v5OE<`6mVc}1yBv+TS%(wxV`P=prlF`W1>
+zsuu3ktNAySCP5vHqnM(pVSa63W^T}WnzRf_M)JVaN3iY4eTLRpWNgO_t#%zi(6b~v
+zaSpSM&F|4cb|Cv1*7F^7ex%#GgJg2(15(o;Fg7>(79#^VHu}1JpX}*fOaSD2hb{w~
+zq|farjY)ZuLYp*Ql)RrFYKrtxnjpuCK!#@2EP8MaeG#Q8N^I=sae;Od0bIl-l3hfx
+w8<&Y*iu_k_mCCtBcAA*qF>AqM7U8o|nb$E#GEUfA^uK|{2*+?2c|5?#PmvT|`~Uy|
+
+diff --git a/out/production/Assignment2/VolumeofCone.class b/out/production/Assignment2/VolumeofCone.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..c8fb8ff3385dd6dd2fcd4233a992a81665168e08
+GIT binary patch
+literal 1481
+zc$|$?+j0{}5ItkdT3r@jWCJ3x%@S-%;$lHUE=1rMOBe()Hpqxdcp9$<YtU*(wL9y?
+zACTe~^2BSN;Q=U8l@G{=<b{8r=vfIY%1Vl@+Uc2|)7@vfXZoLaZ~g{w9S<`Y!Kj6V
+zjWHw{CZF&<Uh=rVTiV!uB3#XoyefUEml;M2#ioT6!&D54wDd|1m;1g5(#Rld!M1S(
+z<DYnG?1x%(7)GSeaI_w8NL8x&-AFfdAb6*ofrUvEe~KYr7z!yiO@wJ1GdM~_RHO%;
+zZ3fc+fK1^y5xn7R5jeUfoTY&8$SBO<1irBFrHxt4F-#9JWw5$t<r$)V8oeWEQtuK6
+zL-eE#2d4<@i{Et3*Kt~EDV(NLA4F{lx!cmomGu1UdvAX~nOsRB{xT@ytc7zn&f@~Z
+z_(70$u3O}*tA1q|D^#n+YL4(F8y9hj;dqC)MMe28*AJy`(Ja*5*P&rrEgt5Y!Z)<l
+z<KwCzph7x(+>3<cSooH~ZYnS82=$me35G;P?U0zLOJCfLI@==H;@ci+a&_f$ugL>x
+z)_r9{w<JX#uMavYlfJ`Ek&hJ~4ND$Fx+?<N5yXjsRSD07UGg(M1Wwxep-V<uW=w1J
+zQ?8CQG<VzUyxXUhX{ac0#hNsWsX=Z_#ue3PRVf|nfOpr0ZmFFxh1(4CTU4))%pCPN
+zE}%<hjtm_(kwiU%b=<YEVT!TIuy8<E`g^J^`mB5PS>vu&!9K$ugLkM8>;=BX{T)w)
+z3w5R1QMY{f`2S_Nwciy(;DZV5z1ni|u!{=!yoS`KQg+Scv*PhE6rqI%!{TRAweWxv
+z_Ww|77(Fmf;W9NB^NoO+_Cn)#=2DYnB*)Ia0(%~Be@|mFR*vEa8toncSMVdrG|ITz
+zH~yD!Ns^ELg7xzYq+ijkeSuu=*h}Qky~O-Av-qmNSe|``^K;Kon8CvA(;1w3jl$g1
+zHceFfN`jF2#2YLD1pgCRWBD~rpT{%|r6puz8d(ZCO^-j16utg57Kz{mYIUoazy>C9
+zA36L&y~$9&O!!sWyM|>X3{m`q6_QzOlJ+_sBaaFpDs=2cI#QKpqqq?xM&9AR1&c9@
+cRBLf&ZsHcn6q((jzlM8p7hx1~3r(DO4=QhH^Z)<=
+
+diff --git a/out/production/Assignment2/area_of_parallelogram.class b/out/production/Assignment2/area_of_parallelogram.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..5e146eb027b20bfde0d04d8c13dd786ab06cfcb9
+GIT binary patch
+literal 1418
+zc$|$?TTc@~6#k|ZwzMmkR-|Il1wmU-tEhOXAW%Vy^^%lej1Od5#&+p;r`eqn`6oX4
+z>a#v*qKQAiM}H9U%(g~ItFg(>oXdC4`R1JI{5bmh9l$DzQH0QEAZ(%^0}Lbk{D5a2
+z?pCwU%lo3D7zQ5LuC10C`qG&l0}+PN0Mt^plPy)a>k4lWQN#?GCQf1KM3&N_uSA0(
+zWV;Mw#lT_9Y{6}|R7rV)H*!%J7}51d8ItLqkj##*kT7u?V?;!@)bV65Jlp+^j9{GV
+zue(ZkmZ}M>ChTfWMR67r2F{sCVUi)yBa*>rYR%C+J1p8KP-LzW1<mt<2@6w%b;Vm%
+za8=NiLIf8XhW->Sb6>=%zq2MT;WEQ`gV#k~x)rWo+Nws9uehsxU8#`it`$LsT<v@n
+z>3K8<>wr5g;adjg$;FBBu6(oG<Q{h%;mE3|PY}+_J;5+sv|aJ6)hG*Zo0lE3#EY`R
+zogMDkTJIRcs%8^~@nX+xIRZ4ep4yr8>t5|3zYb(zg+Q!Qu0#(cS&Lm4hOEq?ugq|&
+zq<E$Nls7xHq9xh#Dq_Rd%0y3Y*K|G_^O}^(R~~OZ6{;rp{0JU0OmEW!beJXI1k*SX
+zYT3TUh6k`3#TxPk9_bOSGtB(qZMz4uE;{tvQ`_JbCA~w2cgJr=2iPvY$=y9i_%lT*
+z>#b(4yAOX0+&*lI9`NIxZ2uK=neG&MI$6n9g8FF|bYt@l_kH0T*kqXfFRBK%7|#D2
+zO0Pg0j48~~i=lrZF#TrGdWEzs?Tq&Rxi4TJ1NT*02LfXsuF-0?0R+8H`yg&$p%eU*
+z5dE}2`3B?FCk%d}EBp!Z_?gd0&VR=FC9O<%l;z3yNTuE*Ihm?0hRHJ){)!oZ+#e9r
+z$TW!`gR+{!9K9U6Y>Y}KNKTSu5t&(ftFB^*NDR|eh+~T$7ftgPVHYrhn<RxbDcr^)
+z?J=xS#2uoXB;Q@~hA77++#{(E_X9-e2x|rm#tbs$f-XG3673NRTcK|m8>B@^dW-_4
+GKKlzGB46kL
+
+diff --git a/out/production/Assignment2/area_of_triangle.class b/out/production/Assignment2/area_of_triangle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..7118458a9f986b1c79803c38376c2f4be539ef0f
+GIT binary patch
+literal 1448
+zc$|$?-A)rh6#k|y-O?_IAXrdzQPkES>JO+`M6iHXi<p$4#tSkn16{h^X?CYXp1?=Y
+zD{sAq3rR5X0elVL!+2&}0!lS*GJEEn^PO|PnKLurf9`(+FpC#)gb+3mG0}l2L(eAP
+z;u(j#8=0ljrYI|h=#=f+YMLROO0O7*F`NuQ4P`r-Vwt<H@H!Dk!hmU_3*EnEDQ^2p
+z)EGjx%g|p49Jb8l-Fib6l_z*D8;5}&UH>FQGSwE6UeOi$Oq@bL5s?jbG}%kfb`Ov-
+zoMsrBca`ugRS{N+`@)jzmhx<(<A^v0F=XJ3iL)4H=xdXM!KiD^(TrPsnropX?go+3
+zjL(~}FhW>Yyi<8s1^bha;UdG?!}1kjZ&cJ#0?`>Xzg`+wOr(%zI9=mak&|wjt5>$F
+z(9BodRlX)Lmp)D*hHK<%mMKfmqefX<+-V5QGH`<$z-b|?a((rnDnleE*GQZw*sgfd
+zsFj4b%uCwQTaab$tZ+h--ZDm1#rC!D&qP`B)wpivK<aI~y&=DjVPJE?bc53LwLy}#
+zaO@nBm6d2z7`lpzm#d4s-eMFl%7#}K3$|AJ|D-jhQ_;E~OR0S2@%o}r6}jfeFv~E!
+zOr6jXK_6&-5M|lE#ZE+#i(?M+1{QQXo-m9avbEhUSrskP%?>T_vXb65!^fkCqXlf%
+zeahW6NBE-!DXWco_W0`m7P!1!7j582_pf;`v+3h0a@=u>w$eQ^^LjgT4)=ZG8+gWW
+z>A$ENC@`G+H<X@)CKw~QPS1z_LSXs<q5l|Z8Ip`-$JITsoxq);e>5<Lag+XL6M$Q|
+zO|lbrFy0FOfe2zGUw?)1W*41%bY^$a+dJ?D$!lM5?tNZs7Y?+^NUHn8CyXW|S_~&6
+zsp=_=%E>69lF@x!1_=5Y2_1EnraJ)#&1VdWfJ1_q_0g3cq`D)-B}JAAV)%$&vjV!Y
+zgdV)2`>J`56JFaVaF?QpCGO!q$pjY3I!S97B>w~QhA7WXWN8+`RDcNm#F7CcOz&+N
+b4})!)CNQWh!($pVcuHEFW_diPgoD2TEDmJ+
+
+diff --git a/out/production/Assignment2/areaofIsoscelesTriangle.class b/out/production/Assignment2/areaofIsoscelesTriangle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..4b72242592581ac802a1307ba185cfab993bdd1d
+GIT binary patch
+literal 1496
+zc$|$?-A)rh6#k|y-O{dzpwcSfBB-rD6ctpg;!hE&7BMM7jaSoUq)WFu&F+-Q6Zi;v
+z<*nCxAqgfvfUn_u7|(1=#IzVUnLTsP`OZ1t%$b=VzxKWZcz|a~L=ZI)Gtq}Q!{8R*
+z=6RQUoB7r1mar8={Ep)}YJnk|&8-_qFdPd(E#<iRip@Pw`29#CWxzCX1OtC%sq6$w
+zG#Da|$8e$?IvklVdCiupC|~eKAqfM6y8bbSbhalXx2`J;n>daWL`1gK!DP>U$J<9H
+zFv2kT$Wy|%R83e_9tcamu}XmqY~cz^`3~`NMG_gDGH}|&D8?9udn98pnp$%;^$xN2
+zq9}>CNvt&WGbSud5Y`iKRmoG~MwJqnWH|SSM@=}JHPw?z{65;>5RD5avdA%vG<aPU
+zrDt>X!cjGv1&Vtr&`cI{-CPp5M6Px{Tlzk=&f4Z~OIVhHE0mAZisYO9;=x*{I76%`
+zH%J^UJDzyfYE*^4#;e*fRF*b(*Eu0c?-*mM<`9WY`H*}Cf;6~p_Q~w)URy?f9m>EK
+z!|5hv8}5N5Yq{&3k(E_x)EJIb6u0XuyxAd^tjLycizP=Zqld7Y)*0!1K9o`g%ID1$
+zp=xp?NZ<j(`8Dd34%A)JJ?rX}<pdTx8b>jSMLaUFq?`4aVd@Wi$J>^5(OE>he@om}
+z(%)hDaPSOufNcWH+}j|UQ)MaZt!ANnHx3J2+i8j(@Pqr=zQ=`JcZwo+-HM}h&&-nE
+z-lEHcKm-P!(AoVjss_po<Nt=z6Ve7_0+;Ez(O(2iKREQCCM{2rk?gy;3-&p5=jk60
+zjZw_d-)sYL71v1i<2q(L!9Nj0g5=9@FkXE@|1KTnFBlp+`4#C)Uorl!q_wmA+I%cK
+z@ctvF(lIT@(y?s)IHu%$oKWfb9?k;<{e+Z`x=7Q{AqUN88mW*&ikJ=4&CgKX3F49^
+z%N#MhN3UNQ16ai%UeImUyk`lo?Q^(6QN$8Aaf@UMD`cIgHDt(to4gUqGlK%nVz?6`
+kBEPU|z=+cO9L3#mTNVfmD$DSY#(gZ4mZVt;Pbp#MHvw;Vl>h($
+
+diff --git a/out/production/Assignment2/areaofRectangle.class b/out/production/Assignment2/areaofRectangle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..320d8208867c3069ab9e50f450b8d48d6695bb1e
+GIT binary patch
+literal 1437
+zc$|$?+foxj5IvK`Y)Dov31Ffki-IPA#Jghf0zo7a)G`#7<<le#WXWbXwL78Y3;YCq
+z^3`W}z$&cr1N;g9#Ik1-luNYSs-2$hKHYt`dv?D6-2Vn(7R4w62x<uFIE64n?<U{k
+zS&Q2n*%#$aQIQPc8Phi9Lxx~Fv#KG&(C34i(zLRr3b$?Hb|H$G23^N#bRWr5+V-TV
+zGXzYVVW8+cOeb5g8%<e~uHf}t6dHO}{XT|dx+5gBswyOO^kaaCI8Avt*-O{750DX@
+zVHkR1OW_)_Dhx~58?tIR>xN5TLyRmDMG9v%oYQe0Lkx)yX&AJI(kw-~O{w)clFS>#
+zN0A=ZVPJ%?ws<ECw)9(6h~Ux@24zZkj6s}wKc?d{t}vXb^P0#zc7@B=rmWJ=Bark|
+z;rYzT(h+3H)k<G+T$R(<;#N}_hK31-9!~X~^;ZYA7(#hxjYLn;w8isgy)4`nURI8H
+z(W!82mAj_W+s2TrnpC{6cq~tjTy?IdIGBFhsUzf9Aq;HZ-)>NrL<b~Uizf~cS(!y|
+znc;Lv@=9%)H`;`vC8z0D#Db}m{$s4BR3<ubbB-fD>GH<1kX2{Ri{KH%g%xVQ3Q)~g
+zqxd}l!}JW+6UJ;5bI5C$SHpP1F#3nBX>U0-(I(xR&jPPV$K7W5c=$-Pfvv)e++MSU
+zH(GR@TC<Tm`SpJbT-k1j4)DYMYyFV9%*hmaZdoN$su}48)y}-dJx_QV78%C=i>iia
+z)Uba;=`Lu2F@kZrH`EgVQ#S{#lcZ%yGLompzku!d?yIzhePa+)wCXJYL9dbQ!gbte
+z2me3_5t1ukp}pBf*B3gnyNJgJ_mG^}!-e++rCmJGrbEe4_lHjyPOCMQPKIjJVL~Ls
+z`xpfX_8Bo1k*4jAUte*VLd>rpBUTCeiBnW_gm|RMa+}!Y=n7jzH<r+g65>ARTZC8k
+zo3slnhJ?IBGKK<K?-KtM`R|c8KzSxHO}h~8`-s3#ENRe!bjbz@q*^kA2P7jD_L$y>
+OSRgG*yQh?H38`Pwbz}kn
+
+diff --git a/out/production/Assignment2/perimeterofRectangle.class b/out/production/Assignment2/perimeterofRectangle.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..16b5bcd278aa30b7da3000d7f870de38c668f547
+GIT binary patch
+literal 1424
+zc$|$?TTc@~6#k|Zwv^>o?g+RDXv?i$Q7E8LL28N`OEAV4r)6lDZg-pADUpBT6R$qQ
+z10<OE1B}0kcxGD^(`wvg=gge*opZi3XJ)=%UVH<vhL>Rk(4--#qZus>T?hP-$1QH>
+z<FB&^A}1MImQCA~s|-!i*sg{UL$?pANYjdEa@@9s+lnySH0V0o(eX!=%#kNWi6LOx
+z41H<eU^?-XU9QNCbOkRZ!qCvA@^>=~MjJw6yDCGEj$ZT;5vL-r2Ych1_7yUO0fxB^
+zTME~Z1z}ji&dY+q?L8w)0Gb-kzHf1<I$~&vForO!;f9V8j572z2+N?A)yh&u)F@WV
+zlcdfQKUKs{9R|h;Yl}}ZWlMj{QW4td2_2J|Vi+j#qDVS+j>~tZEYQp&4$@OmQ?dHE
+zA>1KTwVIscD$2$ow<^LgG{hKs%fdBFg3QkT+pBsQf=OqOL}%Kx#j8pwE8HEPRfb5~
+z$#H9!yQW&#ltEcAi9vt5QLqHrOI$UtKl-6j;S8<6{1{k@@Z8N)yq*Sd(x&SU4`~^v
+zKg-abkvv!2=H(i-aK@>)Ik9P~#ZV)D^C}#jxOK;oo^*M6TgZa5=Y_DsFtI~@{^eEI
+zc*FDz*4cumVLZc{hIQ4YB*Wxy-ll!%6h)1GwQ-v~Cmr{Q;q&!_Py<%8Z_#nHgg2RX
+zoMNS%sNaXbIqn>lMFaTtovdEVM65nUl3P~Bl&WQVN^NY?;+`iw4Vw&8|3y{97Q@)T
+zq4XkD!5BxBUJvyJz|{Le<20?}BpJ!(>2t6X-#kNOi?3|LERA{<fH};QY$cbwHRm6M
+zXePPw725k#w4T#3K1C$be}=)CGmNdMVRhsfW246yZXOx^SXc-Wpf7lVTL7WHpiMd4
+zrs;{FP$i$H_d_LYBN{z)R|gToDCwq1GfS`5B08{)E<8uXC-{)CN`DXc5ma>WfOH`A
+z5@{b1*+C+|K-K`oiQ+NMn()L&1TL|xL1RoK)uLbj5)vds<hDxxGNl0}XB74YQW*LP
+D>g!}X
+
+diff --git a/out/production/Assignment2/perimeterofSquare.class b/out/production/Assignment2/perimeterofSquare.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..9e78f3267fa8651788df3f9424daf5e7590d88a9
+GIT binary patch
+literal 1364
+zc$|$?T~8B16g^W4+m=P32ox>2C?Ex-ev1}Rs31*>nv`ISPs1|MrQ6-QJ4@uB_~fgv
+z!UH6j_yhb;8t-f?LRyVYI(P5fbMHAbcV@o-JpBe>355hAXwwkY(T)y=o;|+Lvo?2j
+zv#+-Hgee(1<}JsPiwtd(nN1BbhTaeqNXyQaOzt?siz9(f4Z4mlT)I%Dbl^)-Wr$b~
+zLw_+0SZ=o9)B;(Op5WD70vdW0e=kF7vLz(5sTlfnTt+_$aRYh2*lW*nej{TTWEfs?
+zr0@(`7KU$a3*T^eLZ|dT;GRfe2v;;*)se<9Ltl$B3|dWjwi4ZtR9}vy>0Q#JL|@Zk
+zV3e?q_#g|847aF|q>a6yV+`XAgH>J;dDk(yd}GNnefg3*(pOarndZ7N+@w%lz3F-$
+zHNe>Cb|4HxLxy&~COoSuDD3Xk7sC+EyW3>Ci<To^2GuR$ZSXCdW|BqM<n|`_Eaf*Q
+zqq1xfeP6MuQjUUEuG%y(`L5NH8RBP246HzS?(M2#E#Qix>6p+g;|yIT$<4|-uQfC!
+zN^anpV%1X4K$EapRfi7Mvg=A;dc3wSWZB*JW0+?!HmI*>DHj`USiZr!JFu9*Q#{kK
+zq`I=qF!o2S<?Oo^(GXp4)G9Zn>m4wBJm2^Ruui?koo!qAV@21k1hriA>i?FwaZnR2
+z;OF<Re(iFZ<`Q{s+a*h?M(G8$oq3!4zVJ1yFpU3~R1Gf}M*a<@8(#-w6qEEis9yw3
+zy$>`_k(VXQ$hJ?NfE|Y6X&O7i$u`W;sMi6wg;}z3O1a%g{z8Z-*}1RK-X0--LMQhK
+z$>hK>Qq#v6SxA4vfR-*V(&X?dt^*YKj827_pwGjQL-9>eUB%H!%zbnnQ}jfn$usB?
+zn!zRF?7<@>Lp@W(X^^TrxJ%i@j(fOIwv!Zg;Q?t&QT!oABa{QG6#0Ry290Tip9|Oc
+W7*EK?2)jW49P%NK;W<{ZhM`|wB2^;*
+
+diff --git a/out/production/Assignment2/perimeterofparallelogram.class b/out/production/Assignment2/perimeterofparallelogram.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..d6cc02adb68ad997f6b34f0aa3b6a4aa18e3a4c3
+GIT binary patch
+literal 1431
+zc$|$?T~8B16g^W4TgviP<Wq{Pg0z6tPZSC$RFImYCM6i-i$fXc!gi<Gof7#cKJn@^
+zJV1hpKfw5#h<CO{Ar#{#JF|1<+<VWxb9a88o&Er@fHzTu&|n~Jq7h9D9XouFryTBX
+zr`~Psh=O8hnzdb9%`-G4lIsQ{44na~qHHIXFL2itUNfR-F<_c#McXAW`F&rB5<|##
+z8M<@9hAmTBw_H(q<q2L&M`55t$M0n5OVp(#*L8$06F1OJLS#i<boSn}-E(FHy$r)k
+zt`eT5io){kP2pQ|D_E4d#~nvFa@*sjDEcvA;HHT|#2LEkcw;cidgW;CHD%ST6v5jh
+zOKZPn!oqFhy5ft<x+<ttHb(WmYhoB9480}3D>Bk8aP`4fMf&m;ca^WbW|LR_MlecS
+z)g%hi^XMF`J?>P5Wf@3PmCC}iOM<rL)}@>n!Wp?K7}|5TE8bR08^T-T8xA3{oGfr>
+zoqM)k*TAqU+N5G2cb&sDaY|gDT~Fduy#g>a|FLCYS>khVn|yZFp%a?B(mRAQPVWXo
+zYhLlf?kX?W<VEwc;uXZQtrzj@G)`)l)O3qdDqnfLyed>tZu$|-F^sP1b3eDN+X$BJ
+zTdchaFQRyf1p|xv)H2jXfA!n$p4=6+G^z)=%nM3-`wU+%Hb#wDRj|U{O-J~{IVpE5
+z<@D8hTxYnpUlw)f7b{x*JJZRlE;5u^-d2L@YG!qTGY<EC;Tu?H82K-$238n`{!OKe
+zp-RSWB<K>+PY6t3BQ%cDDn&D+xpC|S>@e6Kr?Dvj8!$nmStZ~;CTVUalLs~9U&Lsn
+zdFeZhk4I=ep_V>EEY@?3zVTxW&FNu&@Bl;c0}M0{#y=OQ!bIo}pW+TctZ!)12KVUm
+zFbJrFkI^-v1GbQiF8X)-5J8-<5ke;D@|s2)X3>FHhy?<l5Le?5@d#lp2agE@v1bT<
+zN@Dv+{1okm$WH>#=&J$G14if!vjz;t41%VE{AZA+IYMUh^v+TkP;f?WUn7hD-xK3#
+Al>h($
+
+diff --git a/out/production/Assignment2/perimeterofrhombus.class b/out/production/Assignment2/perimeterofrhombus.class
+new file mode 100644
+index 0000000000000000000000000000000000000000..df0875e2593535b6026447cd0049e52570335c7d
+GIT binary patch
+literal 1367
+zc$|$?TTc@~6#k}Mwv^@8a#g@Z0b4-oU9^Bg1!+>$qy%Gp8p=QywmWrqmdHQx$yZ;6
+z2S_mS2l$^fp4nD}v>Kaq&dxdC`OY_UX6F0Pvu^;Fkc%OLCIihTTF}bSy~huD+TreQ
+z`qkE+C@O~5dE2$sB12O$wP_&A&=Z0JWjpCYk-M(&+7Ls#0n<bWIxn#l4t*uc3=!L9
+z=*x!zTc&evB~S(B30}^`V4z#q?_n5BHiV=$b%lh9Ui6U=8K{e7uRYuSjf`S|VPwTs
+z!n0IKSiZe2d`s?xlfwIedm@G*TrqIf#4tt}5)Eh=jEbH)T69fPbvcUMyQD{pzGlM0
+z7-3!ULFHT(Zc#2y8+*gVI3^ed%6wmBrCa3cjjc-b<ty$gU$f>?^}JEsq)=6TQF<OV
+zz&hYgAS}y3iXmPRo?R9cmOEZambU_;YR<}S!O)erUGXv~ZwYUMZ#m?N=Vg&Qo7}VY
+zyyk3HC7Y6Z^Yv62ik7)<RDbeaqeU~coo6wy9O1dQOKgb-aPsEs4hnf0XXq#>Uff^j
+zm71tnK?Yt?tlD}qP_JxO6VbU^mQwl3<CS%xN^;weVxGa;pw^z}T<*1H`xfhJ#bOLk
+z@yx)IZp<>n_#e5pdm#5kO?9<btGuYBcgXPZV()9fYUwrZZacys&r7)<R5JC;|6Ah5
+zVMR26U);dz&C8_fDYD#g3bqoojb={oXV&4qFMI<l3={t))xZme(SJkf(pSM4Ly{f{
+z{fmI<CxXT)nx)AyvMp1mU`Jtin#R`9*@PJy%_;!5FiW<LQf}9hzYwCC?A%uvZ;#P-
+zN@w>N@p%6U2B%Ljx-k3+{l;)<k(?uExDHU@Guky~l0J{Z8oJ&j@#-4wR5?L6a*$q$
+zVVYU=4$YvGYIfrh;-Q`?s%ep`JGe{PR2}zlpKLoR?7#!kHc0V@6pc_0h$->|X#)l`
+c2tOCD@iCr|jS_Z&{uyLL9K&<0VhuyT0Cfab(*OVf
+
